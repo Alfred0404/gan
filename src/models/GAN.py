@@ -29,7 +29,13 @@ class GAN:
     ):
         self.latent_dim = latent_dim
         self.img_dim = img_dim
+
         self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
+        logger.info(
+            f"device: {torch.cuda.get_device_name(0)}"
+            if torch.cuda.is_available()
+            else "No GPU/cuda available, using CPU"
+        )
         self.gen_path = gen_path
         self.disc_path = disc_path
 
