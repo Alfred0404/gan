@@ -87,6 +87,7 @@ def plot_images(images, img_shape=(28, 28)):
         img_2d = img.squeeze().reshape(*img_shape)
         ax.imshow(img_2d, cmap="gray")
         ax.axis("off")
+    plt.savefig("saved_figures/generated_images.png")
     plt.show()
 
 

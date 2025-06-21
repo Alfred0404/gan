@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
     gan = GAN()
     gan.load_dataset()
-    gan.train(epochs=10)
+    gan.train(epochs=100)
     gan.save()
     gan.plot_loss()
     images = gan.generate(n=8)
